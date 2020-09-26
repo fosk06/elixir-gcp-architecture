@@ -6,7 +6,6 @@
 
 variable "gcp_project_id" {
   description = "gcp project id"
-  default = "prestashop-data-integration"
 }
 
 variable "gcp_region" {

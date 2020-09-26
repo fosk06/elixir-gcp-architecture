@@ -48,8 +48,8 @@ run_local: release_local ## run the project
 
 deploy: # re deploy on gcp
 	@echo "$(Green)build the app and redeploy ..........................................$(NC)"
-	gcloud beta compute instances stop "elixir-instance-0" "elixir-instance-1" --zone "europe-west1-c"  --project "prestashop-data-integration" && \
-	gcloud beta compute instances start "elixir-instance-0" "elixir-instance-1" --zone "europe-west1-c"  --project "prestashop-data-integration"
+	gcloud beta compute instances stop "elixir-instance-0" "elixir-instance-1" --zone "europe-west1-c"  --project ${GCP_PROJECT} && \
+	gcloud beta compute instances start "elixir-instance-0" "elixir-instance-1" --zone "europe-west1-c"  --project ${GCP_PROJECT}
 
 ssh:
 	gcloud beta compute ssh --zone "europe-west1-c" "elixir-instance-0" --project ${GCP_PROJECT}
