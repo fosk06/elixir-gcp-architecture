@@ -83,20 +83,26 @@ variable "image" {
   description = "kind of the image for the vm"
 }
 
-variable "machine" {
+variable "machine_type" {
   type        = string
   description = "Machine type to use for APIs"
   default = "n1-standard-1"
 }
 
-variable "ssd_size" {
-  type        = number
-  description = "ssd_size in gb"
-  default = 30
+variable "disk_type" {
+  type        = string
+  description = "size of the disk"
+  default = "pd-ssd"
 }
 
-variable "total_instances" {
+variable "disk_size" {
   type        = number
-  description = "number of instances to start"
-  default = 2
+  description = "size of the disk"
+  default =350
+}
+
+variable "vm_preemptible" {
+  type        = boolean
+  description = "are vm preamtible"
+  default = true
 }
