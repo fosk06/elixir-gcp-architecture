@@ -111,11 +111,47 @@ variable "vm_preemptible" {
 variable "release_url" {
   type        = string
   description = "release of the URL"
-  default = "--"
+  default = "gs://elixir_build_artifacts/api-0.1.0.tar.gz"
 }
 
 variable "secret_key_base" {
   type        = string
   description = "secret key to deploy and run elixir application"
   default = "bOweqFstyZamEyoS8FgijJAgXbny7xod3UeV+YmEuKeAfE1M901MDuIxvDu00dYl"
+}
+
+variable default_autoscaler {
+  type        = bool
+  description = "create default autoscaler or not"
+  default = false
+}
+
+variable default_autoscaler_target_cpu {
+  type        = number
+  description = "target CPU to scale up the cluster"
+  default = 0.7
+}
+
+variable autoscaler_min_replicas {
+  type        = number
+  description = "minimum number of vm in the pool"
+  default = 2
+}
+
+variable autoscaler_max_replicas {
+  type        = number
+  description = "maximum number of vm in the pool"
+  default = 5
+}
+
+variable autoscaler_cooldown_period {
+  type        = number
+  description = "time to wait for VM availability"
+  default = 30
+}
+
+variable "node_distribution_port" {
+  type        = string
+  description = "erlang node distribution port"
+  default = "9999"
 }

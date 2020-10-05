@@ -18,5 +18,10 @@ module "elixir_cluster" {
     vm_preemptible = var.vm_preemptible
     release_url = var.release_url
     secret_key_base = var.secret_key_base
+    default_autoscaler = var.default_autoscaler 
+    default_autoscaler_target_cpu = var.default_autoscaler_target_cpu 
+    autoscaler_min_replicas = var.autoscaler_min_replicas 
+    autoscaler_max_replicas = var.autoscaler_max_replicas 
+    autoscaler_cooldown_period = var.autoscaler_cooldown_period 
 
 }
