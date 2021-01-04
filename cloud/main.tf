@@ -11,17 +11,4 @@ module "elixir_cluster" {
     dns_managed_zone_name = var.dns_managed_zone_name
     dns_managed_zone_dns_name = var.dns_managed_zone_dns_name
     gcp_bucket_name = var.gcp_bucket_name
-    image = var.image
-    machine_type = var.machine_type
-    disk_type = var.disk_type
-    disk_size = var.disk_size
-    vm_preemptible = var.vm_preemptible
-    release_url = var.release_url
-    secret_key_base = var.secret_key_base
-    default_autoscaler = var.default_autoscaler 
-    default_autoscaler_target_cpu = var.default_autoscaler_target_cpu 
-    autoscaler_min_replicas = var.autoscaler_min_replicas 
-    autoscaler_max_replicas = var.autoscaler_max_replicas 
-    autoscaler_cooldown_period = var.autoscaler_cooldown_period 
-
 }
