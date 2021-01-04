@@ -30,3 +30,4 @@ api_nodes-*.tar
 service_account.json
 cloud/terraform.*
 cloud/.terraform/*
+cloud/.terraform.tfstate.lock.info
