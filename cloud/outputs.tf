@@ -33,6 +33,27 @@
 #   description = "network_tags"
 # }
 
+
+output "bucket_url" {
+  value       = module.elixir_cluster.bucket_url
+  description = "bucket url"
+}
+
+output "startup_script_url" {
+  value       = module.elixir_cluster.startup_script_url
+  description = "startup script url"
+}
+
+output "shutdown_script_url" {
+  value       = module.elixir_cluster.shutdown_script_url
+  description = "shutdown script url"
+}
+
+output "vpc_link" {
+  value       = module.elixir_cluster.vpc_link
+  description = "vpc link"
+}
+
 output "subnet_link" {
   value       = module.elixir_cluster.subnet_link
   description = "subnet_link"
@@ -41,4 +62,20 @@ output "subnet_link" {
 output "service_account_email" {
   value       = module.elixir_cluster.service_account_email
   description = "service_account_email"
+}
+
+
+output "service_namespace" {
+  description = "The GCP service directory namespace name"
+  value       = module.elixir_cluster.service_namespace
+}
+
+output "service_name" {
+  description = "The private hostname where apps will be available (DNS A record)"
+  value       = module.elixir_cluster.service_name
+}
+
+output "dns_name" {
+  description = "The private hostname where apps will be available (DNS A record)"
+  value       = module.elixir_cluster.dns_name
 }
